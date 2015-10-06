@@ -7,6 +7,6 @@ To run:
 
 *cd into repository*
 
-*type*
+*run search.py in the command line*
 
     python3 search.py
