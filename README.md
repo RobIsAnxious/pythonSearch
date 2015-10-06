@@ -10,3 +10,5 @@ To run:
 **run search.py in the command line**
 
     python3 search.py
+
+**enjoy your cat pictures or dank memes**
