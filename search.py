@@ -22,26 +22,26 @@ def search():
         base_url = engine_dict["bing"]
         url = base_url + str(String_Entry.get())
         webbrowser.open(url)
+    else:
+        combo.set(search_engines[0])
 
 
 root = Tk()
-root.title('Search in ')
-
-
+root.title('pythonSearch')
 
 String_Entry = Entry(root)
-String_Entry.grid(row=0, column=0, padx=10, pady=50)
+String_Entry.grid(row=0, column=0, padx=10)
 
 Search_Button = Button(root, text='Search', command=search)
-Search_Button.grid(row=0, column=1)
+Search_Button.grid(row=0, column=2)
 
 Quit_Button = Button(root, text='Quit', command=quit)
-Quit_Button.grid(row=0, column=2, padx=10)
+Quit_Button.grid(row=0, column=3, padx=10)
 
 combotest = StringVar()
 combo = ttk.Combobox(root, textvariable=combotest)
 combo['values'] = search_engines
-combo.grid(row=1, column=1)
+combo.grid(row=1, column=0)
 
 root.configure(background='grey')
 root.mainloop()
