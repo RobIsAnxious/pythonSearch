@@ -3,10 +3,12 @@ My first exploration with Python. This program opens up a web browser to the sea
 
 To run:
 
-*Clone this repository*
+**Clone this repository**
 
-*cd into repository*
+**cd into repository**
 
-*type*
+**run search.py in the command line**
 
     python3 search.py
+
+**enjoy your cat pictures or dank memes**
