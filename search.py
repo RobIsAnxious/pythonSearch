@@ -10,22 +10,14 @@ search_engines = ['Google', 'Yahoo', 'Bing']
 
 
 def search():
-    if combo.get() == search_engines[0]:
-        base_url = engine_dict["google"]
-        url = base_url + str(String_Entry.get())
-        webbrowser.open(url)
-    elif combo.get() == search_engines[1]:
-        base_url = engine_dict["yahoo"]
-        url = base_url + str(String_Entry.get())
-        webbrowser.open(url)
-    elif combo.get() == search_engines[2]:
-        base_url = engine_dict["bing"]
-        url = base_url + str(String_Entry.get())
-        webbrowser.open(url)
-    else:
-        combo.set(search_engines[0])
+    if combo.get() == '':
+        combo.set('Google')
+        
+    url = engine_dict[combo.get().lower()] + str(String_Entry.get())
+    webbrowser.open(url)
 
 
+#Interface setup
 root = Tk()
 root.title('pythonSearch')
 
@@ -38,8 +30,8 @@ Search_Button.grid(row=0, column=2)
 Quit_Button = Button(root, text='Quit', command=quit)
 Quit_Button.grid(row=0, column=3, padx=10)
 
-combotest = StringVar()
-combo = ttk.Combobox(root, textvariable=combotest)
+Drop_Down = StringVar()
+combo = ttk.Combobox(root, textvariable=Drop_Down)
 combo['values'] = search_engines
 combo.grid(row=1, column=0)
 
